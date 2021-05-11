@@ -99,7 +99,7 @@ contract PayableCalculator {
     
     
     function withdrawProfit() public onlyOwner {
-        require(_operationsTotalProfit > 0, "SmartWallet: can not withdraw 0 ether");
+        require(_operationsTotalProfit > 0, "PayableCalculator: can not withdraw 0 ether");
         uint256 amount = _operationsTotalProfit;
         _operationsTotalProfit = 0;
         payable(_owner).sendValue(amount);
