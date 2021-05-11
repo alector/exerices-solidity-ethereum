@@ -10,7 +10,7 @@ contract PayableCalculator {
     address private _owner;
     uint256 private _operationCost; 
     uint256 public result; 
-    uint256 private _operationsTotalProfit;
+    uint256 public _operationsTotalProfit;
     mapping(address => uint256) private _balances;
     mapping(address => uint256) private _operations;
     
