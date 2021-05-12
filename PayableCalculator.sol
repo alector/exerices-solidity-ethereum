@@ -102,6 +102,8 @@ contract PayableCalculator {
         require(_operationsTotalProfit > 0, "PayableCalculator: can not withdraw 0 ether");
         uint256 amount = _operationsTotalProfit;
         _operationsTotalProfit = 0;
+
+        // totalAmmount = address(this).balance 
         payable(_owner).sendValue(amount);
         emit WithdrawAllProfit (_owner, amount); 
     }
